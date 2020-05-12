@@ -94,6 +94,11 @@ const App = () => {
           message: `Information of ${name} has been deleted successfully`,
           type: 'success'
         })
+      }).catch(err => {
+        showMessage({
+          message: `Information of ${item.name} has already been removed from server`,
+          type: 'error'
+        })
       })
     }
   }
